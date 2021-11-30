@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="../styles/style_task.css">
+  <link rel="stylesheet"  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<style>
+  .modal-edit-task {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 420px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+
+  .modal-content-edit {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 10px solid #888;
+    width: 30%;
+  }
+
+  .close-edit-task {
+    color: #aaaaaa;
+    float: right;
+    font-size: 35px;
+    font-weight: bold;
+    padding: inherit;
+  }
+
+  .save-edit-task {
+    color: #aaaaaa;
+    font-size: 35px;
+    font-weight: bold;
+    padding: inherit;
+  }
+
+  .close-edit-task:hover,
+  .close-edit-task:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  .save-edit-task:hover,
+  .save-edit-task:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+</style>
+<body>
+  <div id="myDIV" class="header">
+    <h2 style="margin:5px">Lista de Tarefas</h2>
+    <span onclick="criaTask()" class="addBtn">Adicionar</span>
+    <input type="text" id="myInput" placeholder="Digite uma tarefa...">
+  </div>
+  <div id="myModal" class="modal-edit-task">
+    <div class="modal-content-edit">
+      <span class="close-edit-task fas fa-close"></span>
+      <span class="save-edit-task fas fa-save"></span>
+      <input type="text" id="editInput" placeholder="Edite sua tarefa..." style="float: none;">
+    </div>
+  </div>
+  <ul id="myUL"></ul>
+  <script src="../scripts/script.js"></script>
+</body>
+</html>
